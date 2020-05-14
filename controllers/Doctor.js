@@ -15,7 +15,7 @@ module.exports.login = async function(req, res){
         return res.json(200, {
             message: 'Sign in successful, here is your token, please keep it safe!',
             data:  {
-                token: jwt.sign(user.toJSON(), 'codeial', {expiresIn:  '10000'})
+                token: jwt.sign(user.toJSON(), 'codeial', {expiresIn:  '10000000'})
             }
         })
 
@@ -53,3 +53,8 @@ module.exports.register=(req,res)=>
             });
         });
 };
+
+
+
+//5ebb09da817a17100c24e124
+//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..r3UbFHyemaNuzuUEvBBBawefyjm-AyvbglfyTDfTf8I

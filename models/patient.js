@@ -13,7 +13,17 @@ const userSchema=new mongoose.Schema({
          {
         type:String,
         required:true
-         }
+         },
+    doctor:
+        {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'UserDoctor'
+        },
+
+    reports: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Report'
+        }]
    
        
 },{
