@@ -9,10 +9,10 @@ router.post('/register',passport.authenticate("jwt",{session:false}), usersContr
 // router.post('/register_patient',,patientsApi.registerPatient);
 router.get('/', usersController.AllPatient);
 
-router.get('/one', usersController.patient);
+// router.get('/one', usersController.patient);
  router.post('/:id/create_report',passport.authenticate("jwt",{session:false}),usersController.createReport);
 
-//   router.get('/:id/all_reports',usersController.all_reports);
+   router.get('/:id/all_reports',usersController.all_reports);
 
 
  module.exports = router;

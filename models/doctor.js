@@ -27,9 +27,9 @@ const userSchema=new mongoose.Schema({
 });
 
 
-const UserDoctor=mongoose.model('UserDoctor',userSchema);
+const User=mongoose.model("Doctor",userSchema);
 
-module.exports=UserDoctor;
+module.exports=User;
 
 
 

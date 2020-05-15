@@ -1,8 +1,8 @@
 const mongoose=require('mongoose');
 
-const userSchema=new mongoose.Schema({
+const patientSchema=new mongoose.Schema({
 
-    Phone:
+    phone:
        {
         type:Number,
         required:true,
@@ -14,16 +14,7 @@ const userSchema=new mongoose.Schema({
         type:String,
         required:true
          },
-    doctor:
-        {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'UserDoctor'
-        },
-
-    reports: [{
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Report'
-        }]
+   
    
        
 },{
@@ -31,6 +22,6 @@ const userSchema=new mongoose.Schema({
 });
 
 
-const UserPatient=mongoose.model('UserPatient',userSchema);
+const Patient=mongoose.model('Patient',patientSchema);
 
-module.exports=UserPatient;
+module.exports=Patient;

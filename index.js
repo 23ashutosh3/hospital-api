@@ -7,6 +7,8 @@ const db = require('./config/mongoose');
 const mongoose = require('mongoose');
 const passport=require('passport');
 const passportLocal=require('./config/passport_jwt_strategy')
+
+app.use(passport.initialize());
 app.use(express.urlencoded());
 
 

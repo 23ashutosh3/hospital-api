@@ -1,13 +1,12 @@
 const mongoose=require('mongoose');
 
-const userSchema=new mongoose.Schema({
+const reportSchema=new mongoose.Schema({
 
     status:
        {
         type:String,
         required: true
 
-       
        },
 
        date:
@@ -15,18 +14,18 @@ const userSchema=new mongoose.Schema({
           default: Date.now 
         },
 
-        Doctor:
+        doctor:
          {
           type:mongoose.Schema.Types.ObjectId,
-          ref:'UserDoctor',
-          required:true
+          ref:"Doctor",
+        
          },
 
          patient:
          {
            type:mongoose.Schema.Types.ObjectId,
-           ref:'UserPatient',
-           required:true
+           ref:"Patient",
+           
  
          }
    
@@ -36,6 +35,6 @@ const userSchema=new mongoose.Schema({
 });
 
 
-const UserReport=mongoose.model('UserReport',userSchema);
+const Report=mongoose.model("Report",reportSchema);
 
-module.exports=UserReport;
+module.exports=Report;
