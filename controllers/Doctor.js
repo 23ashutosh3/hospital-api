@@ -44,8 +44,13 @@ module.exports.register=(req,res)=>
     });
 
     //save data in database
-    register.save().then(data=>{res.send(data);
-    }).catch(err =>
+    register.save().then(
+        data=>
+        {
+            
+            res.send(data);
+        })
+    .catch(err =>
         {
             res.status(500).send({
                 message:err.message || "some error occured"

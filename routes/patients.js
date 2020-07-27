@@ -6,7 +6,6 @@ const usersController = require('../controllers/Patient');
 
 
 router.post('/register',passport.authenticate("jwt",{session:false}), usersController.register);
-// router.post('/register_patient',,patientsApi.registerPatient);
 router.get('/', usersController.AllPatient);
 
 // router.get('/one', usersController.patient);

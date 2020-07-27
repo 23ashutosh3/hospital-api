@@ -120,28 +120,7 @@ module.exports.register = async function(req, res)
 
 
 
-// }
 
-// module.exports.AllPatient=async 
-
-//         if (!user){
-               
-//          const covdoc= doctor.findById({_id:req.user._id})
-                
-
-
-
-//             User.create(req.body, function(err, user){
-//                 if(err){console.log('error in creating user while signing up'); return}
-
-//                 return res.send(user);
-//             })
-//         }else{
-//             return res.redirect('/patients/one');
-//         }
-
-//     });
-// }
 
  module.exports.all_reports = async function(req, res)
  {

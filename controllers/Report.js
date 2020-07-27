@@ -33,7 +33,7 @@ try{
    
 }
 
-
+//fetch all reports
 module.exports.Allreport=(req,res) =>{
     Report.find().then(user =>{
         res.send(user);
